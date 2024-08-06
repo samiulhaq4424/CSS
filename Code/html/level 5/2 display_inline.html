@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display Inline Block</title>
+    <!-- 
+        <link rel="stylesheet" href="../../css/level 5/display_inline.css" /> 
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        /* height: 100px;
+        width: 100px; */    
+        /*
+        here even if you remove comment, the box size will not be affected. As in display:inline; the content will will in the same line and it will take the required space only. If you want to adjust height and width the use inline-block 
+        */
+        background-color: coral;
+        margin: 5px;
+        border: 2px solid black;
+        
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="div1" class="box">box1</div>
+      <div id="div2" class="box">box2</div>
+      <div id="div3" class="box">box3</div>
+    </div>
+  </body>
+</html>

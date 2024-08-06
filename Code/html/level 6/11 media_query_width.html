@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Query</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        padding: 10px;
+        background-color: hotpink;
+      }
+      @media screen and (width: 300px) {
+        /*when screen size will have width:300px, then only the condition will be true and css inside it will be reflected*/
+        .box {
+          background-color: brown;
+          border: 5px solid black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+  </body>
+</html>

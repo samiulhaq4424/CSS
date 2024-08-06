@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Float not used nowadays-->
+    <title>Float Property</title>
+    <!-- <link rel="stylesheet" href="../../css/level 6/float.css" /> -->
+    <style>
+      .container {
+        height: 110px;
+        width: 300px;
+        border: 1px solid #000;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+      }
+
+      .box1 {
+        background-color: red;
+        float: right;/*apne parent(i.e div with class="container") ke right me chala gya */
+      }
+
+      .box2 {
+        background-color: blue;
+        float: left;/*apne parent(i.e div with class="container") ke left me chala gya */
+        /* float: right; */ /*will not overlap*/
+        /*uncomment above line and see what will happen when you put float:right instead of left*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+    </div>
+  </body>
+</html>

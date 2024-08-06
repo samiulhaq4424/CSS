@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex Align Items</title>
+    <!-- <link rel="stylesheet" href="../../css/level 6/flexbox_align_items.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #heading {
+        margin-left: 180px;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 3px solid black;
+        margin-right: 5px;
+      }
+      #container {
+        height: 600px;
+        width: 600px;
+        background-color: lavender;
+        padding: 10px;
+        margin: 20px;
+        border: 3px solid black;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        /*NOTE: "align-items" is used to align the items along the cross-axis*/
+
+        /*center is used here*/
+        align-items: center; 
+
+        /* align-items: start;  */
+        /* align-items: end;  */
+      }
+
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: yellow;
+      }
+      #box4 {
+        background-color: hotpink;
+      }
+      #box5 {
+        background-color: lightblue;
+      }
+      #box6 {
+        background-color: coral;
+      }
+      #box7 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Flexbox Container</h1>
+    <div id="container">
+      <div id="box1" class="box">Flex Item 1</div>
+      <div id="box2" class="box">Flex Item 2</div>
+      <div id="box3" class="box">Flex Item 3</div>
+      <div id="box4" class="box">Flex Item 4</div>
+      <div id="box5" class="box">Flex Item 5</div>
+      <div id="box6" class="box">Flex Item 6</div>
+      <div id="box7" class="box">Flex Item 7</div>
+    </div>
+  </body>
+</html>

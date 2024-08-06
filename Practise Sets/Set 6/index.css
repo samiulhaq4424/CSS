@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: moccasin;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 25px;
+    padding-top: 5px;
+}
+nav a {
+    text-decoration: none;
+}
+
+
+img {
+    height: 100px;
+}
+#image_container {
+    border: 2px solid black;
+    height: 150px;
+    display: flex;
+
+    /*to keep the image at the center of the container*/
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#box_container {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    width: 400px;
+}
+#box2 {
+    flex-grow: 1;
+    flex-shrink: 1;/*if you only write here flex-shrink:1 and not in class="box" then it will not show effect when conatiner conataining it will have it's height and width reduce(use inspect to see by changing values of height and width in box_container, therefore to see the effect write flex-shrink=0 in class="box")*/
+}
+
+.box {
+    height: 75px;
+    width: 75px;
+    border: 2px solid red;
+    flex-shrink: 0;
+}
+
+#media_box {
+    height: 50px;
+    width: 50px;
+    background-color: darkseagreen;
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    #media_box {
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #media_box {
+        background-color: blue;
+    }
+}

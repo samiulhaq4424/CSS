@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Unit Rem</title>
+    <!-- <link rel="stylesheet" href="../../css/level 5/unit_rem.css" /> -->
+    <style>
+      * {
+        font-size: 50px;
+      }
+
+      #first {
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+        font-size: 10px;
+      }
+
+      #second {
+        background-color: blueviolet;
+        width: 70%;
+        height: 50%;
+        font-size: 2rem; /*font-size of second will be as per the font-size of the root/body, here font-size of second= 2*50px =100px, you can use inspect and change the value of font-size of body and see the chnages*/
+      }
+    </style>
+  </head>
+  <body>
+    Body
+    <div id="first">
+      first
+      <div id="second">second</div>
+    </div>
+  </body>
+</html>

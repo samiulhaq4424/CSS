@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+        1) vw: viewport width || vh: viewport height 
+        2) say for whole page/body/screen, vw is the width from left to right of page & vh is from top to bottom of it
+
+         __________________________
+        |           |              |
+        |           | vh           |                         
+        |           |              |   (say a whole page)
+        |    vw     |              |
+        |___________|______________|       
+        |           |              |
+        |           |              |                         
+        |           |              | 
+        |           |              |
+        |___________|______________| 
+    -->
+    <title>Relative Unit: VH and VW</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #first {
+        width: 50vw;/*aking 50% of width of screen**/
+        height: 80vh;/*taking 80% of height of screen*/
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first"></div>
+  </body>
+</html>

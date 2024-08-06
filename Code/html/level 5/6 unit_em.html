@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Unit Em</title>
+    <!-- <link rel="stylesheet" href="../../css/level 5/unit_em.css" /> -->
+    <style>
+      body {
+        font-size: 100px;
+        background-color: indianred;
+      }
+
+      #first {
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+        font-size: 25px;
+      }
+
+      #second {
+        background-color: blueviolet;
+        width: 70%;
+        height: 50%;
+        font-size: 2em; /*jo bhi parent ka font-size hoga uske relative me iska font-size hoga, yaha second ka parent first hai
+                          and it's font-size is 25px, so second ka font-size is 25px*2=50px, now you can change in "inspect" the font-size of first and see how font-size of second is changing*/
+      }
+    </style>
+  </head>
+  <body>
+    Body
+    <div id="first">
+      First
+      <div id="second">Second</div>
+    </div>
+  </body>
+</html>

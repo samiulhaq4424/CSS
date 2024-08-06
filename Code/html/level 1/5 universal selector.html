@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Universal Selector</title>
+    <!-- Unviversal selector generally used to make margin and padding of page to 0-->
+    <style>
+      * {
+        color: red;
+        margin: 0;
+        padding: 0; /*see what will happen when you comment out margin and padding*/
+      }
+
+      /* here if you remove below comment you will see universal selector has the least priority */
+      /*
+        h1{
+            color: blueviolet;
+        }
+            
+        p{
+            color: green;
+        }
+      */
+    </style>
+  </head>
+  <body>
+    <h1>Universal Selector</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi.</p>
+  </body>
+</html>

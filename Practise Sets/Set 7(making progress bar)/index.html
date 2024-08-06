@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practise Set 7</title>
+    <style>
+      .progress-container {
+        width: 90%; /*iska parent body ha, so 90% of width of the body*/
+        height: 25px;
+        background-color: gainsboro;
+
+        border: 2px solid black;
+        border-radius: 20px;
+
+        position: relative;
+        left: 4%; /*moved to 4% from the left of body*/
+      }
+      .progress-bar {
+        background-color: mediumorchid;
+        height: 100%; /*iska parent progress-container, so ye iska parent ka pura height lelega*/
+        border-radius: 20px;
+
+        animation: animate_progress_name 3s;
+      }
+
+      @keyframes animate_progress_name {
+        0% {
+          width: 0%;
+        }
+        90% {
+          width: 95%;
+        }
+        95% {
+          width: 70%; /*bounce back from width:95% to 70%*/
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </body>
+</html>

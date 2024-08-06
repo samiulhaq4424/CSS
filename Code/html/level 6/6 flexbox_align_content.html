@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex Align Content</title>
+    <!-- <link rel="stylesheet" href="../../css/level 6/flexbox_align_content.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 3px solid black;
+        margin: 5px; /*see what happen if you comment this line*/
+      }
+      #heading {
+        margin-left: 180px;
+      }
+      #container {
+        height: 600px;
+        width: 600px;
+        background-color: lavender;
+        padding: 10px;
+        margin: 20px;
+        border: 3px solid black;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        /*align-content is used for spacing between the items and align-content property sets the distribution of space between and around content items along a flexbox's cross axis*/
+        align-content: center; /*ye pura content ke upar lagu hota ha, aur uska spacing between items reduce kardeta ha as sab ko say center me aana hai. It can take values same as "justify-content which is along main-axis" but yaha sab items pe lagu hoga*/
+      }
+
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: lightgreen;
+      }
+      #box4 {
+        background-color: hotpink;
+      }
+      #box5 {
+        background-color: gold;
+      }
+      #box6 {
+        background-color: lightslategray;
+      }
+      #box7 {
+        background-color: lightcoral;
+      }
+      #box8 {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Flexbox Container</h1>
+    <div id="container">
+      <div id="box1" class="box">Flex Item 1</div>
+      <div id="box2" class="box">Flex Item 2</div>
+      <div id="box3" class="box">Flex Item 3</div>
+      <div id="box4" class="box">Flex Item 4</div>
+      <div id="box5" class="box">Flex Item 5</div>
+      <div id="box6" class="box">Flex Item 6</div>
+      <div id="box7" class="box">Flex Item 7</div>
+      <div id="box8" class="box">Flex Item 8</div>
+    </div>
+  </body>
+</html>

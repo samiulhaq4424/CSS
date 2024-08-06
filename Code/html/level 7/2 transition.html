@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transition Property</title>
+    <style>
+      .btn {
+        height: 20px;
+        width: 70px;
+        border: 1px solid blue;
+        border-radius: 5px;
+        background-color: aliceblue;
+
+        transition-property: all; /*defines which CSS properties will transition*/
+        transition-duration: 2s; /*sets how long the transition lasts*/
+        /**transition-timing-function: controls the speed curve of the transition, here ease-in-out means starting and ending me slow and mid me speed hga**/
+        transition-timing-function: ease-in-out;
+        /*transition-timing-function: steps(3);*/ /**3 steps me transition hga**/
+        transition-delay: 0s; /*specifies a delay before the transition starts*/
+
+        /*short-hand-*/
+        /*transition: all 1s ease-in-out 0s;*/
+      }
+      .btn:hover {
+        height: 35px;
+        width: 90px;
+        border: 1px solid red;
+      }
+      .btn:active {
+        height: 25px;
+        width: 80px;
+        border: 1px solid red;
+        background-color: indianred;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Click Me</button>
+  </body>
+</html>

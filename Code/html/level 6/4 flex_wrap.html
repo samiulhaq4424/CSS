@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flexbox Wrap</title>
+    <!-- <link rel="stylesheet" href="../../css/level 6/flex_wrap.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #heading {
+        margin-left: 50px;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 3px solid black;
+        text-align: center;
+        margin-right: 5px;
+      }
+      #container {
+        height: 600px;
+        width: 600px;
+        background-color: lavender;
+        padding: 10px;
+        margin: 20px;
+        border: 3px solid black;
+
+        display: flex;
+        /*can be: nowrap(defualt), wrap, wrap-reverse*/
+        /*NOTE: In wrap & wrap-reverse, the size of items will be same and if it does not fit in one row, the remaining items if left will go to next row as items don't compromise with their height and width; but in nowrap items will compromise with their height & width*/
+
+        flex-wrap: wrap;
+
+        /*you can understand by removing the comment and see*/
+        /* flex-wrap: wrap-reverse; */
+        /* flex-wrap: nowrap; */
+      }
+
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: yellow;
+      }
+      #box4 {
+        background-color: tomato;
+      }
+      #box5 {
+        background-color: lightgreen;
+      }
+      #box6 {
+        background-color: lightslategray;
+      }
+      #box7 {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Flex Container</h1>
+    <div id="container">
+      <div id="box1" class="box">Flex Item 1</div>
+      <div id="box2" class="box">Flex Item 2</div>
+      <div id="box3" class="box">Flex Item 3</div>
+      <div id="box4" class="box">Flex Item 4</div>
+      <div id="box5" class="box">Flex Item 5</div>
+      <div id="box6" class="box">Flex Item 6</div>
+      <div id="box7" class="box">Flex Item 7</div>
+    </div>
+  </body>
+</html>

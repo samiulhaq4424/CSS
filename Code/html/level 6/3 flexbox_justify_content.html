@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex Justify Content</title>
+    <!-- <link rel="stylesheet" href="../../css/level 6/flexbox_justify_content.css"/> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 75px;
+        width: 75px;
+        border: 3px solid black;
+        margin-right: 5px;
+      }
+      #heading {
+        margin-left: 50px;
+      }
+      #container {
+        height: 600px;
+        width: 800px;
+        background-color: lavender;
+        padding: 10px;
+        margin: 20px;
+        border: 3px solid black;
+
+        display: flex;
+        /*NOTE: "justify-content" works along main-axis of the page*/
+
+        /*can be: flex-start, flex-end, space-between, space-around, space-evenly, center*/
+        justify-content: space-between; 
+
+        /*if you use this, item will not be reversed as seen in flex-direction:row-reverse*/
+        /* justify-content: flex-end;  */
+
+        /*default*/
+        /* justify-content: flex-start;  */
+        
+        /* space-around: The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items. If there is only one item, it will be centered. */
+        /* justify-content: space-around; */
+
+        justify-content: center;
+      }
+
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: yellow;
+      }
+      #box4 {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Flexbox Container</h1>
+    <div id="container">
+      <div id="box1" class="box">Flex Item 1</div>
+      <div id="box2" class="box">Flex Item 2</div>
+      <div id="box3" class="box">Flex Item 3</div>
+      <div id="box4" class="box">Flex Item 4</div>
+    </div>
+  </body>
+</html>

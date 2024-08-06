@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transform Rotate</title>
+    <!-- Transform allows modification of an element's shape & position -->
+    <style>
+      .box {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        margin: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        /* transition is used, NOTE: if you donot write transition over here and write transform here, then it will be transformed and no transitiong will be seen */
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+      }
+
+      #box1 {
+        background-color: lavender;
+      }
+      #box1:hover {
+        transform: rotate(45deg);
+      }
+
+      #box2 {
+        background-color: lightcoral;
+      }
+      #box2:hover {
+        transform: rotate(180deg);
+      }
+
+      #box3 {
+        background-color: lightseagreen;
+      }
+      #box3:hover {
+        transform: rotatex(45deg); /*like a door, rotating along x-axis*/
+      }
+
+      #box4 {
+        background-color: lightslategray;
+      }
+      #box4:hover {
+        transform: rotatey(45deg); /*like a door, rotating along y-axis*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1" class="box">45 <sup>deg</sup></div>
+    <div id="box2" class="box">180 <sup>deg</sup></div>
+    <div id="box3" class="box">x 45 <sup>deg</sup></div>
+    <div id="box4" class="box">y 45 <sup>deg</sup></div>
+  </body>
+</html>

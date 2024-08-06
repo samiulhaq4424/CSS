@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation</title>
+    <style>
+      .box {
+        height: 75px;
+        width: 75px;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        left: 10;
+        background-color: lightslategray;
+
+        /*animation used*/
+        animation-name: ghumakkad;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 6;
+
+        animation-direction: alternate;
+
+        /* short-hand-
+            animation: ghumakkad 4s ease-in-out 0s 4 alternate; 
+        */
+      }
+
+
+      /*yaha 0to1s me 40px(50-10) slow move karega then from 50% to 60% of remaining time i.e 50-60=10% of 1s=0.1s it will move 160px-50px=110px which will be fast as 0.1s, then from 60% to 100% i.e 100-60=40% of remaining time it will cover 250px-160px=90px jo thda slow hga*/
+        /* 
+        @keyframes ghumakkad {
+        0% { 
+          left: 10px;
+        }
+        50% { 
+          left: 50px;
+        }
+        60%{
+          left:160px
+        }
+        100% { 
+          left: 250px;
+        }
+        */
+
+      @keyframes ghumakkad {
+        0% {
+          /* 0% is same as from,*/
+          left: 10px;
+          top: 0px;
+        }
+        50% {
+          /*means when 50% of 4s(animation-duration)=2s*/
+          left: 150px;
+          top: 100px;
+        }
+        100% {
+          /* 100% is same as to*/
+          left: 500px;
+          top: 0px;
+        }        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Animation</div>
+  </body>
+</html>
+
+<!-- see practice set7, it is good -->

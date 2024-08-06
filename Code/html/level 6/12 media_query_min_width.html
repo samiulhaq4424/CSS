@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Query</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: hotpink;
+      }
+      @media screen and (min-width: 300px) /*condition will be true when "width>=300px" for the screen*/
+      {
+        .box {
+          background-color: brown;
+          border: 5px solid black;
+          height: 150px;
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

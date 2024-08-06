@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transform Translate</title>
+
+
+<!-- In development, this is how x-axis and y-axis looks
+                |
+                |
+      (-x,-y)   |   (+x,-y)
+                |
+   -----------------------------
+                |
+       (-x,+y)  |   (+x,+y)
+                |
+                |
+
+-->
+    <style>
+      .box {
+        height: 75px;
+        width: 75px;
+        padding: 5px;
+        margin: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        /*using transition*/
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+      }
+      #box1 {
+        background-color: lightblue;
+      }
+      #box1:hover {
+        transform: translate(50px); /*wil go right of x-axis*/
+        /* transform: translate(-50px);*/ /*wil go left of x-axis*/
+      }
+      #box2 {
+        background-color: lightcoral;
+      }
+      #box2:hover {
+        transform: translate(50px, 50px);/*will go diagonally right-down-corner*/
+        /*transform: translate(50px, -50px);*/ /*will go diagonally right-up-corner*/
+        /*transform: translate(-50px, 50px);*/ /*will go diagonally left-down-corner*/
+        /*transform: translate(-50px, -50px);*/ /*will go diagonally left-up-corner*/
+      }
+      #box3 {
+        background-color: lightgreen;
+      }
+      #box3:hover {
+        transform: translatex(50px); /*wil go right of x-axis*/
+      }
+      #box4 {
+        background-color: lightslategray;
+      }
+      #box4:hover {
+        transform: translatey(50px); /*wil go down of y-axis*/
+        transform: translatey(-50px); /*wil go up of y-axis*/
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1" class="box">Translate 50px</div>
+    <div id="box2" class="box">Translate 50px, 50px</div>
+    <div id="box3" class="box">Translate X 50px</div>
+    <div id="box4" class="box">Translate Y 50px</div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Z-Index</title> 
+    <!-- Note:
+         1) z-index is used to keep elements ek dusre ke upar like say stack,example: z-index of pop-up is higher 
+         2) z-index is only used for position: relative/absolute/fixed/sticky and not for static
+     -->
+
+    <!-- <link rel="stylesheet" href="../../css/level 5/z-index.css" /> -->
+    <style>
+      .container {
+        height: 500px;
+        width: 500px;
+        background-color: lightgray;
+        position: relative; /*overlap allow nai karta but using z-index overlap kr sakte h*/
+      }
+
+      .box1 {
+        /* .box1: This element is positioned absolutely, with left: 20px and top: 60px, meaning it is offset from the top-left corner of .container by 20px to the right and 60px down. */
+        background-color: lightcoral;
+        left: 20px;
+        top: 60px;
+        z-index: 2;
+      }
+      .box2 {
+        /* .box2: This element is also positioned absolutely, with left: 60px and top: 20px, meaning it is offset from the top-left corner of .container by 60px to the right and 20px down. */
+        background-color: lightgreen;
+        left: 60px;
+        top: 20px;
+        z-index: 1;
+      }
+      .box1 , .box2 {
+        position: absolute;
+      
+        border: 3px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Box1</div>
+      <div class="box2">Box2</div>
+    </div>
+  </body>
+</html>
+<!-- see practice set 5, it is good -->

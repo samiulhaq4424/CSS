@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flex Grow</title> <!--work on flex items-->
+    <!-- <link rel="stylesheet" href="../../css/level 6/flexbox_flex_shrink.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 75px;
+        width: 75px;
+        border: 3px solid black;
+        margin-right: 5px;
+        flex-grow: 1;
+         /*1)sab items bare hojaynge of "same" size wrt to size of container*/
+      }
+      #heading {
+        margin-left: 50px;
+      }
+      #container {
+        height: 300px;
+        width: 600px;
+        background-color: lavender;
+        padding: 10px;
+        margin: 20px;
+        border: 3px solid black;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: yellow;
+        flex-grow: 2;/*2) ye item 2times jyada bara hga comapre to other items if (1) likha hua ha toh, agar (1) nai likha hota toh other items utna hi bare hote jitna mention height & width hais*/
+      }
+      #box4 {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Flexbox Container</h1>
+    <div id="container">
+      <div id="box1" class="box">Flex Item 1</div>
+      <div id="box2" class="box">Flex Item 2</div>
+      <div id="box3" class="box">Flex Item 3</div>
+      <div id="box4" class="box">Flex Item 4</div>
+    </div>
+  </body>
+</html>

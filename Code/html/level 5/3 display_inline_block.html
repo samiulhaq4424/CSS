@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display Inline Block</title>
+    <!-- 
+        <link rel="stylesheet" href="../../css/level 5/display_inline_block.css" /> 
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: coral;
+        margin: 5px;
+        border: 2px solid black;
+
+        display: inline-block;/*Now we can change the height & width of divs*/
+
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="div1" class="box">box1</div>
+      <div id="div2" class="box">box2</div>
+      <div id="div3" class="box">box3</div>
+    </div>
+  </body>
+</html>
