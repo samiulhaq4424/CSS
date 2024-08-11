@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Position</title>
-    <!-- <link rel="stylesheet" href="../../css/level 5/positions.css" /> -->
+    <title>Z-Index</title> 
+    <!-- Note:
+         1) z-index is used to keep elements ek dusre ke upar like say stack, example: z-index of pop-up is higher 
+         2) z-index is only used for position: relative/absolute/fixed/sticky and not for static
+     -->
+
+    <!-- <link rel="stylesheet" href="../../css/level 5/z-index.css" /> -->
     <style>
-      div {
-        height: 70px;
-        width: 70px;
-        background-color: lightskyblue;
-        border: 2px solid black;
-        margin: 2px;
+      .container {
+        height: 500px;
+        width: 500px;
+        background-color: lightgray;
+
+        position: relative; /*<div class="container"> shifts to top:50px and left:100px */
+        top: 50px;
+        left: 100px;
       }
-      #div1 {
-        /* Static positioned elements are not affected by the top, bottom, left, and right properties. here top: 20px and left:90px has no effect */
+
+      .box1 {
+        /* .box1: This element is positioned absolutely, with left: 20px and top: 60px, meaning it is offset from the top-left corner of .container by 20px to the right and 60px down. */
+        background-color: lightcoral;
+
+        /* see waht happens if left & top is commented */
+        left: 20px;
+        top: 60px;
+        z-index: 2;
+      }
+      .box2 {
+        /* .box2: This element is also positioned absolutely, with left: 60px and top: 20px, meaning it is offset from the top-left corner of .container by 60px to the right and 20px down. */
+        background-color: lightgreen;
+        left: 60px;
         top: 20px;
-        left: 90px;
-        position: static; /*by default static*/
+        z-index: 1;
       }
-      #div2 {
-        position: relative; 
-        /*
-        1) jaha iska real postion hoga waha se top,left,right,bottom move kar sakte ha by considering it's position from the top-left corner of the space provided to it, here from it's fixed position origin se top 20px and left se 90px jao
-        2) Adjustment from Original Position: Both #div2 and #div3 will be moved 20px down and 90px right from their original positions in the normal document flow.
-        */
-        top: 20px;
-        left: 90px;
-      }
-      #div3 {
-        /*
-        1) Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. 
-        2) IMP: Other content will not be adjusted to fit into any gap left by the element(not overlapping)
-        */
-        position: relative;
-        top: 20px;
-        left: 90px;
-      }
-      #div4 {
-        /* An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled */
-        position: fixed; 
-        /*here, it consider x-axis as -------> and y-axis downwards, so top-left corner of page is origin, from there it is considering it's position, given here is top se 200px & left se 200px  and it's position is fixed, ispe scroll kaam nai karta i.e fixed rahega, like navigation bar*/
-        top: 20px;
-        left: 90px; /*say change value to 20px*/
-      }
-      #div5 {
-        position: absolute; /*here, it consider x-axis as -------> and y-axis downwards, so top-left corner of page is origin, from there it is considering it's position, given here is top se 200px & left se 200px */
-        top: 200px;
-        left: 200px;
-      }
-      #div6 {
-        /* Absolute positioned elements are removed from the normal flow and can overlap elements. */
+      .box1 , .box2 {
+        /* position: absolute; here box1 & box2 will be positioned wrt it's parent div, woh origin rahega */
         position: absolute; 
-        /*here, it consider x-axis as -------> and y-axis downwards, so top-left corner of page is origin, from there it is considering it's position, given here is top se 200px & left se 200px */
-        top: 220px;
-        left: 220px;
+      
+        border: 3px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 25px;
       }
     </style>
   </head>
   <body>
-    <div id="div1">1 Static</div>
-    <div id="div2">2 Relative</div>
-    <div id="div3">3 Relative</div>
-    <div id="div4">4 Fixed</div>
-    <div id="div5">5 Absolute</div>
-    <div id="div6">6 Absolute</div>
-    <!-- inserting below divs to get the scroll bar -->
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
-    <div>sample box</div>
+    <div class="container">
+      <div class="box1">Box1</div>
+      <div class="box2">Box2</div>
+    </div>
   </body>
 </html>
+<!-- see practice set 5, it is good -->

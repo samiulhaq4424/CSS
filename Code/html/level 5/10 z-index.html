@@ -3,7 +3,7 @@
   <head>
     <title>Z-Index</title> 
     <!-- Note:
-         1) z-index is used to keep elements ek dusre ke upar like say stack,example: z-index of pop-up is higher 
+         1) z-index is used to keep elements ek dusre ke upar like say stack, example: z-index of pop-up is higher 
          2) z-index is only used for position: relative/absolute/fixed/sticky and not for static
      -->
 
@@ -13,12 +13,17 @@
         height: 500px;
         width: 500px;
         background-color: lightgray;
-        position: relative; /*overlap allow nai karta but using z-index overlap kr sakte h*/
+
+        position: relative; /*<div class="container"> shifts to top:50px and left:100px */
+        top: 50px;
+        left: 100px;
       }
 
       .box1 {
         /* .box1: This element is positioned absolutely, with left: 20px and top: 60px, meaning it is offset from the top-left corner of .container by 20px to the right and 60px down. */
         background-color: lightcoral;
+
+        /* see waht happens if left & top is commented */
         left: 20px;
         top: 60px;
         z-index: 2;
@@ -31,7 +36,8 @@
         z-index: 1;
       }
       .box1 , .box2 {
-        position: absolute;
+        /* position: absolute; here box1 & box2 will be positioned wrt it's parent div, woh origin rahega */
+        position: absolute; 
       
         border: 3px solid black;
         width: 100px;
