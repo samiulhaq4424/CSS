@@ -9,11 +9,21 @@
         padding: 10px;
         background-color: hotpink;
       }
+
       @media screen and (width: 300px) {
-        /*when screen size will have width:300px, then only the condition will be true and css inside it will be reflected*/
+        /*when screen size will have exactly width:300px, then only the condition will be true and css inside it will be reflected*/
         .box {
+          /* for text to be at the center of the circle i.e. div */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* align-content: center; */ /*it won't work to center the text*/
+          /* NOTE: use align-items to center content within a single line of content and align-content when dealing with multiple lines of content */
+
+          /* for circle */
           background-color: brown;
           border: 5px solid black;
+          border-radius: 50%;
         }
       }
     </style>

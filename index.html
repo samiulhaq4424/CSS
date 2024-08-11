@@ -1,68 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Flex Items order</title>
-    <!-- 
-         1) work on flex items
-         2) define the sequence in which flex items appear within the flex container,
-            overriding their original order in HTML
-    -->
-
-    <!-- <link rel="stylesheet" href="../../css/level 6/flexbox_items_order.css" /> -->
+    <title>Media Query</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
       .box {
-        height: 75px;
-        width: 75px;
-        border: 3px solid black;
-        margin-right: 5px;
+        height: 100px;
+        width: 100px;
+        background-color: coral;
       }
-      #heading {
-        margin-left: 50px;
-      }
-      #container {
-        height: 150px;
-        width: 600px;
-        padding: 10px;
-        margin: 20px;
-        border: 3px solid black;
-
-        display: flex;
-        justify-content: space-between;
-      }
-
-      #box1 {
-        background-color: aqua;
-        /*
-        Note: if you are using order then sabka order dena, else pahle kon item display 
-              hoga uske liye try to comment some order and see
-        */
-        order: 3;
-      }
-      #box2 {
-        background-color: blueviolet;
-        order: 1;
-      }
-      #box3 {
-        background-color: yellow;
-        order: 4; 
-      }
-      #box4 {
-        background-color: tomato;
-        order: 2;
+      @media screen and (min-width: 250px) and (max-width: 300px) /*condition will be true when 250px<=width<=300px*/
+      {
+        .box {
+          background-color: yellow;
+          border-radius: 50%; /*means all the corners of the div will be 50% rounded, generally 50% gives circle*/
+        }
       }
     </style>
   </head>
   <body>
-    <h1 id="heading">Flexbox Container</h1>
-    <div id="container">
-      <div id="box1" class="box">Flex Item 1</div>
-      <div id="box2" class="box">Flex Item 2</div>
-      <div id="box3" class="box">Flex Item 3</div>
-      <div id="box4" class="box">Flex Item 4</div>
-    </div>
+    <div class="box"></div>
   </body>
 </html>

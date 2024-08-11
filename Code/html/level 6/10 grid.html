@@ -16,7 +16,12 @@
         grid-template-columns: 80px 120px; /*to tell number of columns(here is 2) and their dimensions*/
         grid-template-rows: 80px 150px; /*to tell number of rows(here is 2) and their dimensions*/
       }
-
+      .cell{
+        /* for the text to be at center of each cell */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .item1 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
