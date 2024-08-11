@@ -23,14 +23,29 @@
         margin: 0;
         padding: 0;
       }
+      .class1{
+        height: 1000px;
+        width: 1000px;
+        background-color: lightgreen;
+      }
       #first {
         width: 50vw;/*aking 50% of width of screen**/
         height: 80vh;/*taking 80% of height of screen*/
         background-color: coral;
       }
+      .class2{
+        height: 150px;
+        width: 150px;
+        background-color: lightslategray;
+      }
     </style>
   </head>
   <body>
-    <div id="first"></div>
+    <!-- see div with id="first" respect to it's parent & child -->
+    <div class="class1">
+      <div id="first">
+        <div class="class2"></div>
+      </div>
+    </div>
   </body>
 </html>
