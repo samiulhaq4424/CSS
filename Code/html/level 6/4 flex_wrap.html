@@ -30,9 +30,13 @@
         /*can be: nowrap(defualt), wrap, wrap-reverse*/
         /*NOTE: In wrap & wrap-reverse, the size of items will be same and if it does not fit in one row, the remaining items if left will go to next row as items don't compromise with their height and width; but in nowrap items will compromise with their height & width*/
 
+        /* 
+          NOTE: 
+          - Main Axis: This is the direction in which your flex items are laid out. Since you are using flex-direction: row; (the default   setting), the main axis runs horizontally.
+          - By default, flexbox uses "align-content: stretch;", which stretches the rows across the height of the container. However, since your items aren't filling the entire row, this behavior might be creating unexpected gaps.
+        */
+        
         flex-wrap: wrap;
-
-        /*you can understand by removing the comment and see*/
         /* flex-wrap: wrap-reverse; */
         /* flex-wrap: nowrap; */
       }
