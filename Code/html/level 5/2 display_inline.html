@@ -10,12 +10,21 @@
         margin: 0;
         padding: 0;
       }
-
+      /* #parent{
+        height: 500px;
+        width: 500px; 
+      } */
       .box {
         /* height: 100px;
-        width: 100px; */    
+        width: 100px;  */
+           
         /*
-        here even if you remove comment, the box size will not be affected. As in display:inline; the content will will in the same line and it will take the required space only. If you want to adjust height and width the use inline-block 
+        - here even if you remove comment, the box size will not be affected. As in display:inline; the content will will in the same line and it will take the required space only. If you want to adjust height and width the use inline-block.
+
+        - When using "display: inline;" on an element, it behaves like text or other inline elements such as <span>, <a>, etc. This means:
+          1) Width and Height: Inline elements don't respect width and height properties. The size of an inline element is determined by its content and padding, not by the width and height you specify.
+
+          2) Box Model: The box elements will only take up as much space as their content requires, which is why your 100px width and height are ignored. The box will not stretch to the dimensions you set.
         */
         background-color: coral;
         margin: 5px;
@@ -23,6 +32,7 @@
         
         display: inline;
       }
+      /*  */
     </style>
   </head>
   <body>
