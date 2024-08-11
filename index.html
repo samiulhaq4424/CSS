@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pseudo Classes</title>
+    <title>Text Align</title>
     <style>
-      #btn {
-        height: 20px;
-        width: 70px;
-        border: 1px solid blue;
-        border-radius: 5px;
-        background-color: aliceblue;
+      .box {
+        height: 100px;
+        width: 100px;
       }
-      /* #btn:hover {
-        height: 25px;
-        width: 80px;
-        background-color: green;
-        border: 1px solid red;
-      } */
-      #btn:active /*active means when button is clicked*/
-      {
-        height: 25px;
-        width: 80px;
-        border: 1px solid black;
-        background-color: indianred;
+      #box1 {
+        background-color: lightcoral;
+        text-align: center;
+      }
+      #box2 {
+        background-color: lightgreen;
+        text-align: left;
+      }
+      #box3 {
+        background-color: lightskyblue;
+        text-align: right;
       }
     </style>
   </head>
   <body>
-    <button id="btn">Click Me</button>
+    <h3 id="box1" class="box">Box1</h3>
+    <h3 id="box2" class="box">Box2</h3>
+    <h3 id="box3" class="box">Box3</h3>
   </body>
 </html>
