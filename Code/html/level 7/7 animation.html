@@ -20,12 +20,17 @@
         animation-delay: 3s;/*change the value and see*/
         animation-iteration-count: 3;/*indicates no. of times the animation should repeat, if you want ki animation chalta rahe then use "infinite"; change the value to 2 and 4, see the changes*/
 
-        animation-direction: alternate; /*oscillate from left to right*/
-        /*remove comment 1 by 1 and see the changes*/
-        /* animation-direction: normal; */  /*move from left to right*/
-        /* animation-direction: reverse; */ /*move from right to left*/
-        /* animation-direction: alternate-reverse; */ /*oscillate from */
+        /*oscillate from left to right*/
+        /* animation-direction: alternate;  */
 
+        /*remove comment 1 by 1 and see the changes*/
+
+        /*move from left to right*/
+        /* animation-direction: normal;   */
+        /*move from right to left*/
+        /* animation-direction: reverse;  */
+        /*behaves opposite to "alternate" */
+        animation-direction: alternate-reverse; 
 
         /* 
           short-hand-
@@ -37,6 +42,8 @@
         from /*specify when the style change will happen. We can write 0% as well which is same as from*/
         {
           left: 10px; /*you can use top,left,bottom,right in from and to*/
+          /* see removing below comment */
+          /* top: 150px; */
         }
         to /*specify when the style change will end. We can write 100% as well which is same as to*/
         {
