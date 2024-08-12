@@ -27,6 +27,12 @@
 
         display: flex;
         justify-content: space-between;
+        flex-shrink: 0;
+        /* 
+          - flex-shrink: 0; The element will not shrink at all. It will maintain its width regardless of  the available space in the container.
+
+          - flex-shrink: 1; (default): The element will shrink proportionally if necessary to fit into the  container. 
+        */
       }
 
       #box1 {

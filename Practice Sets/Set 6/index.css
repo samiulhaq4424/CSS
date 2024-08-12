@@ -32,7 +32,12 @@ img {
 }
 
 
-
+.box {
+    height: 75px;
+    width: 75px;
+    border: 2px solid red;
+    flex-shrink: 0; /* This box will not shrink */
+}
 #box_container {
     border: 2px solid black;
     display: flex;
@@ -42,20 +47,21 @@ img {
 }
 #box2 {
     flex-grow: 1;
-    flex-shrink: 1;/*if you only write here flex-shrink:1 and not in class="box" then it will not show effect when conatiner conataining it will have it's height and width reduce(use inspect to see by changing values of height and width in box_container, therefore to see the effect write flex-shrink=0 in class="box")*/
+    flex-shrink: 1; 
+    /* This box will shrink if necessary (here it will not show anything, make extra 5 divs to see the effect)*/
+    /* 
+    - flex-shrink: 0; The element will not shrink at all. It will maintain its width regardless of the available space in the container.
+
+    - flex-shrink: 1; (default): The element will shrink proportionally if necessary to fit into the container. 
+    */
+    /*if you only write here flex-shrink:1 and not in class="box" then it will not show effect when conatiner conataining it will have it's height and width reduce(use inspect to see by changing values of height and width in box_container, therefore to see the effect write flex-shrink=0 in class="box")*/
 }
 
-.box {
-    height: 75px;
-    width: 75px;
-    border: 2px solid red;
-    flex-shrink: 0;
-}
 
 #media_box {
     height: 50px;
     width: 50px;
-    background-color: darkseagreen;
+    background-color: greenyellow;
     border: 2px solid black;
 }
 

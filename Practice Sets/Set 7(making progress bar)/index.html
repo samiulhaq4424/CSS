@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--       Practice Set Level 7 (Animation, Transition & Transform)
+      - Create a webpage with a progress bar that showcases a smooth loading
+        animation. The progress bar should fill up from 0 to 100% with a smooth
+        transition effect and a slight bounce when it reaches 100%.
+   -->
   <head>
     <title>Practise Set 7</title>
     <style>
@@ -19,7 +24,8 @@
         height: 100%; /*iska parent progress-container, so ye iska parent ka pura height lelega*/
         border-radius: 20px;
 
-        animation: animate_progress_name 3s;
+        animation-name: animate_progress_name;
+        animation-duration: 3s;
       }
 
       @keyframes animate_progress_name {
