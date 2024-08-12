@@ -20,6 +20,10 @@ header {
   background-color: green;
   border-radius: 50%;
 }
+#container {
+  border: 3px solid;
+  margin: 5px;
+}
 .box {
   height: 100px;
   width: 100px;
@@ -34,16 +38,12 @@ header {
   border: 2px solid blue;
 }
 #box2 {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   /*see the changes by removing the comment*/
   /* position: relative; */
   border: 2px solid black;
   left: 30px;
-}
-#container {
-  border: 3px solid;
-  margin: 5px;
 }
 #box4 {
   position: fixed;
